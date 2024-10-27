@@ -1,0 +1,33 @@
+.have-an-account {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 10px;
+    padding: 2px;
+    position: relative;
+  }
+  
+  .have-an-account .already-have-an {
+    color: transparent;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .have-an-account .text-wrapper {
+    color: #333333;
+  }
+  
+  .have-an-account .span {
+    color: #666666;
+  }
+  
+  .have-an-account .text-wrapper-2 {
+    color: #111111;
+    text-decoration: underline;
+  }
+  
