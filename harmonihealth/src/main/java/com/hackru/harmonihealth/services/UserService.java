@@ -1,92 +1,92 @@
-package com.hackru.harmonihealth.services;
-
-import com.hackru.harmonihealth.models.UserEntity;
-import com.hackru.harmonihealth.repositories.UserRepository;
-import com.hackru.harmonihealth.web.requests.SearchUserRequest;
-import com.hackru.harmonihealth.web.requests.UpdateUserRequest;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
-
-/**
- * Service interface for managing User entities.
- */
-public interface UserService<UserEntity> {
-    UserEntity getUser(SearchUserRequest request);
-
-    UserEntity insertUser(UpdateUserRequest request);
-
-    UserEntity updateUser(UpdateUserRequest request);
-
-    UserEntity deleteUser(UpdateUserRequest request);
-}
-//        private final UserRepository userRepository;
+//package com.hackru.harmonihealth.services;
 //
-//        @Autowired
-//        public UserService(UserRepository userRepository) {
-//            this.userRepository = userRepository;
-//        }
+//import com.hackru.harmonihealth.models.UserEntity;
+//import com.hackru.harmonihealth.repositories.UserRepository;
+//import com.hackru.harmonihealth.web.requests.SearchUserRequest;
+//import com.hackru.harmonihealth.web.requests.UpdateUserRequest;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.data.domain.Page;
+//import org.springframework.stereotype.Service;
 //
-//        /**
-//         * Save a user.
-//         *
-//         * @param product the entity to save
-//         * @return the persisted entity
-//         */
-//        public Product saveProduct(Product product) {
-//            return productRepository.save(product);
-//        }
+//import java.util.List;
+//import java.util.Optional;
 //
-//        /**
-//         * Get all the products.
-//         *
-//         * @return the list of entities
-//         */
-////        public List<Product> getAllProducts() {
-////            return productRepository.findAll();
-////        }
+///**
+// * Service interface for managing User entities.
+// */
+//public interface UserService<UserEntity> {
+//    UserEntity getUser(SearchUserRequest request);
 //
-//        /**
-//         * Get one product by ID.
-//         *
-//         * @param id the ID of the entity
-//         * @return the entity
-//         */
-//        public Optional<Product> getProductById(Long id) {
-//            return productRepository.findById(id);
-//        }
+//    UserEntity insertUser(UpdateUserRequest request);
 //
-//        /**
-//         * Update a product.
-//         *
-//         * @param id             the ID of the entity
-//         * @param updatedProduct the updated entity
-//         * @return the updated entity
-//         */
-//        public Product updateProduct(Long id, Product updatedProduct) {
-//            Optional<Product> existingProduct = productRepository.findById(id);
-//            if (existingProduct.isPresent()) {
-//                Product product = existingProduct.get();
-//                product.setName(updatedProduct.getName());
-//                product.setPrice(updatedProduct.getPrice());
-//                product.setQuantity(updatedProduct.getQuantity());
-//                return productRepository.save(product);
-//            } else {
-//                throw new RuntimeException("Product not found");
-//            }
-//        }
+//    UserEntity updateUser(UpdateUserRequest request);
 //
-//        /**
-//         * Delete the product by ID.
-//         *
-//         * @param id the ID of the entity
-//         */
-//        public void deleteProduct(Long id) {
-//            productRepository.deleteById(id);
-//        }
-//    }
-//
+//    UserEntity deleteUser(UpdateUserRequest request);
 //}
+////        private final UserRepository userRepository;
+////
+////        @Autowired
+////        public UserService(UserRepository userRepository) {
+////            this.userRepository = userRepository;
+////        }
+////
+////        /**
+////         * Save a user.
+////         *
+////         * @param product the entity to save
+////         * @return the persisted entity
+////         */
+////        public Product saveProduct(Product product) {
+////            return productRepository.save(product);
+////        }
+////
+////        /**
+////         * Get all the products.
+////         *
+////         * @return the list of entities
+////         */
+//////        public List<Product> getAllProducts() {
+//////            return productRepository.findAll();
+//////        }
+////
+////        /**
+////         * Get one product by ID.
+////         *
+////         * @param id the ID of the entity
+////         * @return the entity
+////         */
+////        public Optional<Product> getProductById(Long id) {
+////            return productRepository.findById(id);
+////        }
+////
+////        /**
+////         * Update a product.
+////         *
+////         * @param id             the ID of the entity
+////         * @param updatedProduct the updated entity
+////         * @return the updated entity
+////         */
+////        public Product updateProduct(Long id, Product updatedProduct) {
+////            Optional<Product> existingProduct = productRepository.findById(id);
+////            if (existingProduct.isPresent()) {
+////                Product product = existingProduct.get();
+////                product.setName(updatedProduct.getName());
+////                product.setPrice(updatedProduct.getPrice());
+////                product.setQuantity(updatedProduct.getQuantity());
+////                return productRepository.save(product);
+////            } else {
+////                throw new RuntimeException("Product not found");
+////            }
+////        }
+////
+////        /**
+////         * Delete the product by ID.
+////         *
+////         * @param id the ID of the entity
+////         */
+////        public void deleteProduct(Long id) {
+////            productRepository.deleteById(id);
+////        }
+////    }
+////
+////}
