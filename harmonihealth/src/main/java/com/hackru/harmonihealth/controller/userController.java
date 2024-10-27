@@ -37,12 +37,12 @@ public class userController {
         return ResponseEntity.ok().body(user);
     }
 
+    @DeleteMapping("/delete-user")
+    public ResponseEntity<UserEntity> deleteUser(@RequestBody @Valid UpdateUserRequest request) {
+        UserEntity user = userService.updateUser(request);
+        return ResponseEntity.ok().body(user);
+    }
 
-//    @PutMapping("/currency-code")
-//    public ResponseEntity<Page<CurrCodeDto>> updateCurrCode(@RequestBody @Valid UpdateCurrCodeRequest request) {
-//        Page<CurrCodeDto> updateCurrCode = currCodeService.updateData(request);
-//        return ResponseEntity.ok().body(updateCurrCode);
-//    }
 //    public PersonController(PersonService personService) {
 //        this.personService = personService;
 //    }

@@ -8,11 +8,14 @@ import lombok.Setter;
 public class BaseRunTimeException extends RuntimeException {
     private long startTime;
 
-    public BaseRunTimeException(){super();}
-    public BaseRunTimeException(String message){
+    public BaseRunTimeException() {
+        super();
+    }
+
+    public BaseRunTimeException(String message) {
         super(message);
     }
-    public BaseRunTimeException(String message, Throwable cause){
+    public BaseRunTimeException(String message, Throwable cause) {
         super(message, cause);
     }
 }

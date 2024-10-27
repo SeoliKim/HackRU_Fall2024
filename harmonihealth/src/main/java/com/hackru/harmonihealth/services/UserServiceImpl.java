@@ -16,23 +16,23 @@ import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
-public class UserServiceImpl {//implements UserService {
+public class UserServiceImpl implements UserService<UserEntity> {
     private final UserRepository userRepository;
 
-    //@Override
+    @Override
     public UserEntity getUser(SearchUserRequest request) {
         UserEntity user = userRepository.findByEmail(request.getEmail());
         return user;
     }
 
-//    @Override
+    @Override
     public UserEntity insertUser(UpdateUserRequest request) {
         UserEntity user = new UserEntity(request.getEmail(), request.getUsername(), request.getRole());
         userRepository.save(user);
         return user;
     }
 
-//    @Override
+    @Override
     public UserEntity updateUser(UpdateUserRequest request) {
         Optional<UserEntity> userEntityOptional = Optional.ofNullable(userRepository.findByEmail(request.getEmail()));
         if (userEntityOptional.isEmpty()) {
@@ -46,4 +46,18 @@ public class UserServiceImpl {//implements UserService {
         }
         return userEntityOptional.get();
     }
+
+    @Override
+    public UserEntity deleteUser(UpdateUserRequest request) {
+        Optional<UserEntity> userEntityOptional = Optional.ofNullable(userRepository.findByEmail(request.getEmail()));
+        if (userEntityOptional.isEmpty()) {
+            throw new RecordNotFoundException("Could not delete: No user was found with email: " + request.getEmail());
+        }
+        else {
+            userRepository.delete(userEntityOptional.get());
+        }
+
+        return userEntityOptional.get();
+    }
+
 }
