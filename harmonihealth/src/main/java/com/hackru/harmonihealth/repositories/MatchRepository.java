@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface MatchRepository extends MongoRepository<MatchEntity, String> {
     public MatchEntity findByMatchID(String matchID);
-    public List<MatchEntity> findByEmail(String email);
+    public MatchEntity findByEmail(String email);
 }

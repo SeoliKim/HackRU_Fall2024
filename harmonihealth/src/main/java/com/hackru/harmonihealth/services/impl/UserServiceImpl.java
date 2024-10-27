@@ -1,18 +1,14 @@
-package com.hackru.harmonihealth.services;
+package com.hackru.harmonihealth.services.impl;
 
 import com.hackru.harmonihealth.exceptions.RecordNotFoundException;
 import com.hackru.harmonihealth.models.UserEntity;
 import com.hackru.harmonihealth.repositories.UserRepository;
+import com.hackru.harmonihealth.services.UserService;
 import com.hackru.harmonihealth.web.requests.SearchUserRequest;
 import com.hackru.harmonihealth.web.requests.UpdateUserRequest;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 
-import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor

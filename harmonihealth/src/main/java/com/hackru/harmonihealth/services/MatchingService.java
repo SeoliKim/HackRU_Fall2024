@@ -1,13 +1,9 @@
 package com.hackru.harmonihealth.services;
 
-public class MatchingService{
-    public static void traverseData(){
+import com.hackru.harmonihealth.web.requests.SearchMatchRequest;
 
+public interface MatchingService<MatchEntity> {
+    public void traverseData(SearchMatchRequest request);
 
-    }
-
-    public static void matching(){
-
-
-    }
+    public void matching(SearchMatchRequest request);
 }

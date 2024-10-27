@@ -5,19 +5,14 @@ import com.hackru.harmonihealth.services.UserService;
 import com.hackru.harmonihealth.web.requests.SearchUserRequest;
 import com.hackru.harmonihealth.web.requests.UpdateUserRequest;
 import jakarta.validation.Valid;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RequestMapping("/users")
-public class userController {
+public class UserController {
     private final UserService<UserEntity> userService;
-
-
 
     @GetMapping("/get-user")
     public ResponseEntity<UserEntity> getUser(SearchUserRequest request) {
