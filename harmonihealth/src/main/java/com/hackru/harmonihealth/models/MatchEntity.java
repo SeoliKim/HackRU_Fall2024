@@ -3,6 +3,11 @@ package com.hackru.harmonihealth.models;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class MatchEntity {
     private UUID matchId;
     private UUID user1Id;
@@ -35,50 +40,18 @@ public class MatchEntity {
         this.user2Id = user2Id;
     }
 
-    // Getters and Setters
-    public UUID getMatchId() {
-        return matchId;
-    }
 
-    public UUID getUser1Id() {
-        return user1Id;
-    }
-
-    public void setUser1Id(UUID user1Id) {
-        this.user1Id = user1Id;
-    }
-
-    public UUID getUser2Id() {
-        return user2Id;
-    }
-
-    public void setUser2Id(UUID user2Id) {
-        this.user2Id = user2Id;
-    }
-
-    public LocalDateTime getMatchTimestamp() {
-        return matchTimestamp;
-    }
 
     public boolean isActive() {
         return isActive;
     }
 
-    public void setActive(boolean active) {
-        isActive = active;
-    }
 
-    public MatchStatus getStatus() {
-        return status;
-    }
+
 
     public void setStatus(MatchStatus status) {
         this.status = status;
         this.lastInteractionDate = LocalDateTime.now();
-    }
-
-    public LocalDateTime getLastInteractionDate() {
-        return lastInteractionDate;
     }
 
     public void updateLastInteractionDate() {
