@@ -1,0 +1,12 @@
+.full-background {
+    position: fixed;        /* Stays fixed in place */
+    top: 0;                 /* Start from the top */
+    left: 0;                /* Start from the left */
+    width: 100vw;           /* Full width of the viewport */
+    height: 100vh;          /* Full height of the viewport */
+    background-image: url('../assets/dashboard-back.png');  /* Background image */
+    background-size: cover; /* Covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    z-index: -1;            /* Push behind other elements */
+  }

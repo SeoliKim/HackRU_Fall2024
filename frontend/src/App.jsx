@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import LoginPage from './pages/login'
 import SignupPage from './pages/signup'
+import Dashbaord from './pages/dashboard'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/dashboard" element={<Dashbaord />} />
         </Routes>
       </BrowserRouter>
     </>

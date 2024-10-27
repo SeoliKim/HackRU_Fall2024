@@ -83,7 +83,6 @@ function LoginPage() {
               </span>
             </div>
 
-            <HaveAnAccount className="have-an-account-login" />
           </div>
 
           <img className="logo" alt="Logo" src={logo} />

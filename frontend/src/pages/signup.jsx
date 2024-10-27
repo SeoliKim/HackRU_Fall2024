@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 // import { HaveAnAccount } from "./HaveAnAccount";
 import logo from "../assets/HarmoniHealthLogo.png";
+import { useNavigate } from 'react-router-dom';
 import "./signup.css";
 
 function LoginPage () {
     const [email, setEmail] = useState('');
+    const navigate = useNavigate();
     const handleLogin = async () => {
         // direct to CAS
         console.log("Handle login");
@@ -79,7 +81,7 @@ function LoginPage () {
             </div>
             <span className="text-wrapper-3">
                 Already a user?
-                <button onClick={toSignUp} style={{ background: 'none', border: 'none', color: 'blue', cursor: 'pointer', padding: 0 }}>
+                <button onClick={toLogin } style={{ background: 'none', border: 'none', color: 'blue', cursor: 'pointer', padding: 0 }}>
                   Log in
                 </button>
               </span>
