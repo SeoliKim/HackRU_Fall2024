@@ -1,4 +1,5 @@
 package com.hackru.harmonihealth.controller.dto;
 
-public record ChatResponse() {
+public record ChatResponse(String response) {
+
 }
