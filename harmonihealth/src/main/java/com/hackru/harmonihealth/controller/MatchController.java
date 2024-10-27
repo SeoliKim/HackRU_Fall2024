@@ -24,7 +24,7 @@ public class MatchController {
 
     @GetMapping("/get-user")
     public ResponseEntity<Page<MatchEntity>> getUser(SearchMatchRequest request) {
-        List<MatchEntity> user = matchingService.traverseData(request);
+        Page<MatchEntity> user = matchingService.traverseData(request);
         
         return ResponseEntity.ok().body(user);
     }
