@@ -1,0 +1,23 @@
+
+.back{
+    background-image: url("../assets/home.png");
+    width: 100vw;
+    height: 1400px;
+}
+.button1{
+    float: right;
+    width: 150px;
+    height: 100px;
+    top: 250px;
+    left:100px;
+    position: absolute;
+}
+
+.button2{
+    float: right;
+    width: 150px;
+    height: 100px;
+    top: 300px;
+    left:100px;
+    position: absolute;
+}

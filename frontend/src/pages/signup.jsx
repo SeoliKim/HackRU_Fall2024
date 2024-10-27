@@ -7,39 +7,8 @@ import "./signup.css";
 function LoginPage () {
     const [email, setEmail] = useState('');
     const navigate = useNavigate();
-    const handleLogin = async () => {
-        // direct to CAS
-        console.log("Handle login");
-
-        const { BACKEND_API_URL } = config();
-        // send request to API endpoint
-        try {
-            const response = await fetch(`${BACKEND_API_URL}/login?_id=${email}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                crossDomain: true,
-                
-            });
-            if (!response.ok) {
-                throw new Error('Failed to submit login Request');
-            }
-            // Handle success
-            const responseJson = await response.json();
-            // if success
-            if (responseJson.state == 0) {
-                const role= responseJson.data;
-                console.log(netID+ " successfully logs in as "+ role)
-                SetLocalStorage(netID, role);
-                navigate('/');
-            } else {
-                console.error(netID+ " fail to log in");
-            }
-        } catch (error) {
-            // Handle error
-            console.error('Error submitting Login Request :', error);
-        }
+    const handleSignup = async () => {
+      navigate('/form');
     };
 
     const toLogin = () => {
@@ -51,7 +20,7 @@ function LoginPage () {
       <div className="sign-up-wrapper">
         <div className="sign-up">
           <div className="frame">
-            <div className="div">Sign up</div>
+            <div className="div">Register</div>
 
             <div className="frame-2">
               <div className="link-text">
@@ -73,7 +42,7 @@ function LoginPage () {
                 <input className="text-field-2" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
               </div>
 
-              <button className="button" onClick={handleLogin}>
+              <button className="button" onClick={handleSignup}>
                 <div className="div-wrapper">
                   <div className="sign-up-2">Sign in</div>
                 </div>

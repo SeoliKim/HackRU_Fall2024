@@ -9,36 +9,37 @@ function LoginPage() {
   const handleLogin = async () => {
     // direct to CAS
     console.log("Handle login");
+    navigate('/dashboard');
 
-    const { BACKEND_API_URL } = config();
-    // send request to API endpoint
-    try {
-      const response = await fetch(`${BACKEND_API_URL}/login?_id=${email}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        crossDomain: true,
+    // const { BACKEND_API_URL } = config();
+    // // send request to API endpoint
+    // try {
+    //   const response = await fetch(`${BACKEND_API_URL}/login?_id=${email}`, {
+    //     method: 'GET',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     crossDomain: true,
 
-      });
-      if (!response.ok) {
-        throw new Error('Failed to submit login Request');
-      }
-      // Handle success
-      const responseJson = await response.json();
-      // if success
-      if (responseJson.state == 0) {
-        const role = responseJson.data;
-        console.log(netID + " successfully logs in as " + role)
-        SetLocalStorage(netID, role);
-        navigate('/');
-      } else {
-        console.error(netID + " fail to log in");
-      }
-    } catch (error) {
-      // Handle error
-      console.error('Error submitting Login Request :', error);
-    }
+    //   });
+    //   if (!response.ok) {
+    //     throw new Error('Failed to submit login Request');
+    //   }
+    //   // Handle success
+    //   const responseJson = await response.json();
+    //   // if success
+    //   if (responseJson.state == 0) {
+    //     const role = responseJson.data;
+    //     console.log(netID + " successfully logs in as " + role)
+    //     SetLocalStorage(netID, role);
+    //     navigate('/');
+    //   } else {
+    //     console.error(netID + " fail to log in");
+    //   }
+    // } catch (error) {
+    //   // Handle error
+    //   console.error('Error submitting Login Request :', error);
+    // }
   };
 
   const toSignUp = () => {
@@ -72,7 +73,7 @@ function LoginPage() {
 
               <button className="button" onClick={handleLogin}>
                 <div className="div-wrapper">
-                  <div className="sign-up-2">Log In</div>
+                  <div onClick={handleLogin} className="sign-up-2">Log In</div>
                 </div>
               </button>
               <span className="text-wrapper-3">

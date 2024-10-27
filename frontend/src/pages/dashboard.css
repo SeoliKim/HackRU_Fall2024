@@ -10,3 +10,9 @@
     background-repeat: no-repeat; /* Prevents tiling */
     z-index: -1;            /* Push behind other elements */
   }
+
+  .backdash{
+    background-image: url("../assets/dashboard-back.png");
+    width: 100vw;
+    height: 1400px;
+}
