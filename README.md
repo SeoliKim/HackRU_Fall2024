@@ -15,6 +15,7 @@ We faced many challenges regarding the development of the idea in the first plac
 We are really proud of our logo (complete credit goes to Melissa and all her hard work!) as it symbolizes the purpose of this app. We wanted to create a safe space for those who just need someone to talk to-- someone who can understand what they are going through and help them through advice, or just being there for them. We all need someone in our corner, especially when dealing with mental stress-- nobody deserves to feel isolated. We are also really proud of frontend work we were able to accomplish as well as the successful connection to the backend. 
 
 ## Demo
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/x5aTKS9r0dA/0.jpg)](http://www.youtube.com/watch?v=x5aTKS9r0dA "Harmoni Health Demo")
 
 ## Resources
 https://abcnews.go.com/Health/depression-rates-us-adults-reach-new-high-gallup/story?id=99387994
