@@ -1,4 +1,7 @@
 # HarmoniHealth
+Introducing HarmoniHealth, a place to find companionship in a world riddled with isolation– where those in need find no solace unless they are ‘prescribed’ it. 
+HarmoniHealth offers a safe, secure space where all individuals can share their stories and emotions freely– learning from one another and finding comfort in knowing they’re not alone. This inclusive community provides warmth, empathy, and companionship to everyone– allowing them to take care of themselves and their mental health with the help of others.
+
 ## Inspiration
 Our inspiration for this project stems from our own experiences as well as current news events regarding the rise of depression and mental health issues amongst young adults. In our research, we found that almost 21.3% of all adults in the US have mental health issues with young adults taking the lead. However, when it comes to treatment, we found that over 21% had trouble accessing primary health care with double that amount not being able to get the mental health or substance treatment they needed. This spurred us to develop a project focused on safe treatment through companionship-- in a conservative manner. 
 
